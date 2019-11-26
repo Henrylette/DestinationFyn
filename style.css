@@ -1,0 +1,17 @@
+
+*{
+    margin:0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body{
+   font-family: 'Varela Round', sans-serif;
+}
+
+h1{
+    font-family: 'Bowlby One', cursive;
+    color: #FEFFF7; 
+    text-transform: uppercase; 
+}
+
