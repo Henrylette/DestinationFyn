@@ -17,11 +17,32 @@ h1{
     font-size: 30pt; 
 }
 
+h2{
+    font-family: 'Bowlby One', cursive;
+    color: #FEFFF7; 
+    text-transform: uppercase; 
+    font-size: 25pt; 
+}
+
+.h2-blue{
+    font-family: 'Bowlby One', cursive;
+    color: #215D73;  
+    text-transform: uppercase; 
+    font-size: 25pt; 
+    text-align: center; 
+}
+
 h3{
     font-family: 'Bowlby One', cursive;
     color: #F6B771;  
     text-transform: uppercase; 
     font-size: 20pt; 
+}
+
+h6{
+    font-family: 'Varela Round', sans-serif;
+    color: #FEFFF7; 
+    font-size: 15pt; 
 }
 
 p{
@@ -75,6 +96,7 @@ nav a{
     cursor: pointer;
 }
 
+
 /*--BORDER--*/
 .border-solid{
     border: solid 2px #FEFFF7; 
@@ -85,7 +107,7 @@ nav a{
 
 .border-dotted{
     border: dotted 2px #FEFFF7; 
-    width: 45%; 
+    width: 67%; 
     margin: auto;
     padding: 10px;  
     border-radius: 10px; 
@@ -106,13 +128,20 @@ nav a{
     position: relative;
 }
 
+.section-citat{
+    background-image: url(images/burger-wallpaper.jpg); 
+    background-size: cover; 
+    padding-top: 3%; 
+    padding-bottom: 3%; 
+    text-align: center; 
+}
+
 /*---HOME---*/
 
 /*header-section*/
 .header-home{
     background-color:#F6B771;
     height: 100vh;
-    position: relative;
     background-image: url(images/forside.png); 
     background-size: cover; 
     background-position: bottom right; 
@@ -120,6 +149,7 @@ nav a{
     background-size: 66%; 
     z-index: -1;
 }
+
 
 .header-txt{
     width: 50%; 
@@ -137,6 +167,7 @@ nav a{
 .mini-guide-container{
     display: flex; 
     justify-content: center;
+    flex-wrap: wrap; 
 }
 
 .mini-guide-item{
@@ -149,6 +180,7 @@ nav a{
     display: block; 
     margin: auto; 
 }
+
 
 .mini-guide-txt{
     background-color: #215D73; 
@@ -164,5 +196,53 @@ nav a{
     padding-bottom: 5px; 
 }
 
+/*section citat*/
+.citat-wrapper{
+    background-color: rgba(17, 17, 17, 0.308);
+    border-radius: 10px;   
+    margin: 10px; 
+    padding: 20px;
+}
 
+/*--FOOTER--*/
+footer{
+    background-color: #1D3036; 
+    color: #FEFFF7; 
+    padding-top: 4%; 
+    padding-bottom: 4%; 
+}
+
+.footer-container{
+    display: flex; 
+    justify-content: center; 
+    padding-left: 2%; 
+    flex-wrap: wrap; 
+}
+
+.footer-box{
+    margin-right: 5%; 
+}
+
+
+.footer-box ul{
+   list-style-type: none;
+}
+.footer-box a{
+    font-size: 10pt; 
+    text-decoration: none; 
+    color: #FEFFF7; 
+}
+
+.footer-some{
+    margin-top: 5px; 
+}
+
+.footer-some li{
+    display: inline; 
+}
+
+.footer-some a{
+    font-size: 18pt;
+    margin-right: 5px;  
+}
 
