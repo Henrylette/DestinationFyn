@@ -9,11 +9,25 @@ body{
    font-family: 'Varela Round', sans-serif;
 }
 
+/*--FONTE--*/
 h1{
     font-family: 'Bowlby One', cursive;
     color: #FEFFF7; 
     text-transform: uppercase; 
     font-size: 30pt; 
+}
+
+h3{
+    font-family: 'Bowlby One', cursive;
+    color: #F6B771;  
+    text-transform: uppercase; 
+    font-size: 20pt; 
+}
+
+p{
+    font-family: 'Varela Round', sans-serif;
+    color: #FEFFF7; 
+    font-size: 11pt; 
 }
 
 /*--NAVIGATION--*/
@@ -47,6 +61,7 @@ nav a{
     text-transform: uppercase; 
     padding: 10px 62px;  
     border-radius: 10px; 
+    cursor: pointer;
 }
 
 .btn-yellow{
@@ -57,6 +72,7 @@ nav a{
     text-transform: uppercase; 
     padding: 10px 20px; 
     border-radius: 10px;  
+    cursor: pointer;
 }
 
 /*--BORDER--*/
@@ -83,8 +99,16 @@ nav a{
     padding-bottom: 5%; 
 }
 
+.section-light-blue{
+    background-color: #F4FCFF;
+    padding-top: 2%; 
+    padding-bottom: 3%; 
+    position: relative;
+}
+
 /*---HOME---*/
 
+/*header-section*/
 .header-home{
     background-color:#F6B771;
     height: 100vh;
@@ -107,6 +131,37 @@ nav a{
 
 .btn-right-margin{
     margin-right: 2%; 
+}
+
+/*idé section*/
+.mini-guide-container{
+    display: flex; 
+    justify-content: center;
+}
+
+.mini-guide-item{
+    width: 250px; 
+    margin: 2%;
+}
+
+.mini-guide-item img{
+    width: 100%;
+    display: block; 
+    margin: auto; 
+}
+
+.mini-guide-txt{
+    background-color: #215D73; 
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+}
+
+.mini-guide-p{
+    font-size: 10pt; 
+    padding-right: 5px; 
+    padding-left: 5px; 
+    padding-bottom: 5px; 
 }
 
 
