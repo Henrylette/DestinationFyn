@@ -51,6 +51,12 @@ p{
     font-size: 11pt; 
 }
 
+.blue{
+    font-family: 'Varela Round', sans-serif;
+    color: #215D73; 
+    font-size: 11pt; 
+}
+
 /*--NAVIGATION--*/
 
 nav{
@@ -136,6 +142,7 @@ nav a{
     text-align: center; 
 }
 
+
 /*---HOME---*/
 
 /*header-section*/
@@ -146,7 +153,7 @@ nav a{
     background-size: cover; 
     background-position: bottom right; 
     background-repeat: no-repeat; 
-    background-size: 66%; 
+    background-size: 62%; 
     z-index: -1;
 }
 
@@ -246,3 +253,35 @@ footer{
     margin-right: 5px;  
 }
 
+/*--#destinationhygge-side--*/
+
+.header-des-side{
+    background-color:#F6B771;
+    height: 100vh;
+}
+
+
+.header-des-txt{
+    padding-left: 15%; 
+    padding-right: 15%; 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.guide-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.guide-card{
+    width: 300px;
+    background-color:#F4FCFF; 
+    border-radius: 10px;
+}
+
+.guide-card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
