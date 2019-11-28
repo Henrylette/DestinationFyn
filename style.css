@@ -112,6 +112,13 @@ nav a{
     cursor: pointer;
 }
 
+.btn-blue:hover{
+    background-color: rgb(26, 79, 99); 
+}
+.btn-blue:active{
+    background-color:rgb(39, 109, 134);
+}
+
 .btn-yellow{
     background-color: #FFE9C6;
     color: #215D73; 
@@ -123,6 +130,14 @@ nav a{
     cursor: pointer;
 }
 
+.btn-yellow:hover{
+    background-color: rgb(250, 219, 168);
+}
+
+.btn-yellow:active{
+    background-color: rgb(250, 235, 211);
+}
+
 .btn-orange{
     background-color: #F6B771; 
     color: #215D73;
@@ -132,6 +147,14 @@ nav a{
     text-decoration: none;
     padding: 7px 25px;
     border-radius: 10px;
+}
+
+.btn-orange:hover{
+    background-color:rgb(233, 170, 97);
+}
+
+.btn-orange:active{
+    background-color:rgb(247, 201, 148);
 }
 
 /*--SECTIONS--*/
@@ -339,6 +362,13 @@ footer{
     text-align: left;
     margin: 15px;
 }
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow:hover {
+     transform: scale(1.05); 
+}
 
 .guide-card p{
     font-size: 9pt;
@@ -446,8 +476,10 @@ footer{
     font-size: 20pt;
 }
 
+
 .close a{
     color: #215D73;
+    text-decoration: none;
 }
 
 
