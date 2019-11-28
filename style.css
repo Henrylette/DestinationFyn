@@ -39,6 +39,13 @@ h3{
     font-size: 20pt; 
 }
 
+h5{
+    font-family: 'Bowlby One', cursive;
+    color: #215D73;  
+    text-transform: uppercase; 
+    font-size: 13pt; 
+}
+
 h6{
     font-family: 'Varela Round', sans-serif;
     color: #FEFFF7; 
@@ -102,6 +109,16 @@ nav a{
     cursor: pointer;
 }
 
+.btn-orange{
+    background-color: #F6B771; 
+    color: #215D73;
+    font-family: 'Bowlby One', cursive;
+    text-transform: uppercase; 
+    font-size: 10pt; 
+    text-decoration: none;
+    padding: 7px 25px;
+    border-radius: 10px;
+}
 
 /*--BORDER--*/
 .border-solid{
@@ -276,12 +293,36 @@ footer{
 }
 
 .guide-card{
-    width: 300px;
+    width: 320px;
     background-color:#F4FCFF; 
     border-radius: 10px;
+    text-align: left;
+    margin: 15px;
+}
+
+.guide-card p{
+    font-size: 9pt;
+    text-align: justify;
 }
 
 .guide-card img{
     width: 100%;
     border-radius: 10px 10px 0px 0px;
 }
+
+.btn-des-wrapper{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guide-orange{
+    color: #F6B771;
+}
+
+.guide-card-txt-wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
