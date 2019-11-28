@@ -311,6 +311,11 @@ footer{
     margin-right: 10%;
 }
 
+/*--COMMUNITY-SIDE--*/
+.com-btn-wrapper{
+    text-align: center;
+    margin-top: 3%;
+}
 /*--GUIDES-SIDE--*/
 .header-guide-txt{
     padding-left: 15%; 
