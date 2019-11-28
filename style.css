@@ -39,6 +39,13 @@ h3{
     font-size: 20pt; 
 }
 
+.h3-white{
+    font-family: 'Bowlby One', cursive;
+    color: #FEFFF7;   
+    text-transform: uppercase; 
+    font-size: 20pt; 
+}
+
 h5{
     font-family: 'Bowlby One', cursive;
     color: #215D73;  
@@ -126,6 +133,7 @@ nav a{
     width: 100%;
     margin: auto; 
     border-radius: 10px; 
+    text-align: center;
 }
 
 .border-dotted{
@@ -139,7 +147,6 @@ nav a{
 /*--SECTIONS--*/
 .section-blue{
     background-color:#215D73;
-    text-align: center; 
     padding-top: 5%; 
     padding-bottom: 5%; 
 }
@@ -159,6 +166,10 @@ nav a{
     text-align: center; 
 }
 
+.header-orange{
+    background-color:#F6B771;
+    height: 100vh;
+}
 
 /*---HOME---*/
 
@@ -271,14 +282,29 @@ footer{
 }
 
 /*--#destinationhygge-side--*/
-
-.header-des-side{
-    background-color:#F6B771;
-    height: 100vh;
+.header-des-txt{
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
+.header-des-txt h1{
+    font-size: 50pt;
+}
 
-.header-des-txt{
+.loacl-h3{
+    column-span: all;
+}
+.local-txt{
+    column-count: 2;
+    line-height: 1.5;
+    column-gap: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*--GUIDES-SIDE--*/
+.header-guide-txt{
     padding-left: 15%; 
     padding-right: 15%; 
     position: absolute; 
