@@ -17,12 +17,15 @@ h1{
     font-size: 30pt; 
 }
 
+
 h2{
     font-family: 'Bowlby One', cursive;
     color: #FEFFF7; 
     text-transform: uppercase; 
     font-size: 20pt; 
 }
+
+
 
 .h2-blue{
     font-family: 'Bowlby One', cursive;
@@ -31,6 +34,21 @@ h2{
     font-size: 25pt; 
     text-align: center; 
 }
+
+@media screen and (max-width: 550px){
+    h1{
+        font-size: 20pt;
+    }
+
+    h2{
+        font-size: 12pt;
+    }
+
+    .h2-blue{
+        font-size: 20pt;
+    }
+}
+
 
 .h2-blue-1{
     font-family: 'Bowlby One', cursive;
@@ -214,12 +232,33 @@ nav a{
 .header-home{
     background-color:#F6B771;
     height: 100vh;
-    background-image: url(images/forside.png); 
-    background-size: cover; 
-    background-position: bottom right; 
-    background-repeat: no-repeat; 
-    background-size: 62%; 
-    z-index: -1;
+}
+
+.luksus-style{
+    color:#215D73; 
+}
+
+.header-img-container{
+    width: 50%; 
+    float: right; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-img-container img{
+    width: 55%;
+    position: absolute; 
+    top:60%; 
+    transform: translateY(-50%); 
+    overflow: hidden;
+}
+
+.header-img{
+    width: 45%;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    display: none;
 }
 
 
@@ -230,6 +269,46 @@ nav a{
     top: 50%; 
     transform: translateY(-50%); 
 }
+
+.header-txt h1{
+    margin-bottom: 8%;
+}
+
+
+@media screen and (max-width: 1024px){
+    .header-txt{
+        width: 100%;
+        padding-right: 8%;
+        text-align: center;
+    }
+
+    .header-txt h1{
+        margin-bottom: 4%;
+    }
+
+    .header-img-container img{
+        display: none;
+    }
+
+    .header-img{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .header-txt a{
+        display: block;
+        width: 75%; 
+        margin-bottom: 3%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-img{
+        width: 80%;
+    }
+}
+
 
 .btn-right-margin{
     margin-right: 2%; 
