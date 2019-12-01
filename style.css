@@ -226,6 +226,12 @@ nav a{
     padding: 20px;
 }
 
+@media screen and (max-width: 1024px){
+    .border-dotted{
+        width: 85%;
+    }
+}
+
 /*---HOME---*/
 
 /*header-section*/
@@ -368,7 +374,6 @@ footer{
     margin-right: 5%; 
 }
 
-
 .footer-box ul{
    list-style-type: none;
 }
@@ -389,6 +394,18 @@ footer{
 .footer-some a{
     font-size: 18pt;
     margin-right: 5px;  
+}
+
+@media screen and (max-width: 1024px){
+    .footer-box{
+        margin-right: 1%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .footer-box{
+       
+    }
 }
 
 /*--#DESTINATIONHYGGE-SIDE--*/
