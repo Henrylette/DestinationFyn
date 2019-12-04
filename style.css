@@ -103,7 +103,7 @@ nav{
     padding: 10px;
     width: 100%;  
     float: left;
-    z-index: 1;
+    z-index: 2;
     position: fixed; 
 }
 
@@ -381,7 +381,7 @@ footer{
     font-size: 10pt; 
     text-decoration: none; 
     color: #FEFFF7; 
-}
+}x
 
 .footer-some{
     margin-top: 5px; 
@@ -402,11 +402,6 @@ footer{
     }
 }
 
-@media screen and (max-width: 800px){
-    .footer-box{
-       
-    }
-}
 
 /*--#DESTINATIONHYGGE-SIDE--*/
 .header-des-txt{
@@ -429,6 +424,46 @@ footer{
     column-gap: 40px;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+/*Vue-slider*/ 
+.slide-container {
+    width: 79.1%;
+    margin: auto;
+    padding-top: 1%;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-container {
+    height: 450px;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    background-color: red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.slide-1{
+    background-image: url('images/img1.png');
 }
 
 /*--COMMUNITY-SIDE--*/

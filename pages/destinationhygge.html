@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>#DestinationHygge</title>
-    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
+      <!-- Include stylesheet -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+      <!-- Include the Swiper library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <!-- Swiper JS Vue -->
+      <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
 <body>
     <nav>
@@ -23,7 +31,7 @@
 
     <header class="header-orange">
         <div class="header-des-txt">
-            <h1>#DEStinationhygge</h1>
+            <h1>#Destinationhygge</h1>
         </div>
     </header>
 <section class="section-blue">
@@ -42,7 +50,52 @@
 </section>
 
 <section class="section-light-blue">
-    
+    <div id="vueapp">
+
+        <div class="slide-container">
+            <swiper :options="swiperOption">
+                <!-- slides -->
+                <swiper-slide class="slide-1"></swiper-slide>
+                <swiper-slide>I'm Slide 2</swiper-slide>
+                <swiper-slide>I'm Slide 3</swiper-slide>
+                <swiper-slide>I'm Slide 4</swiper-slide>
+                <swiper-slide>I'm Slide 5</swiper-slide>
+                
+                <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+                <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+                <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
+            </swiper>
+            <!-- Optional controls -->
+            
+
+        </div>
+    </div>
+
+
+    <script>
+        Vue.use(VueAwesomeSwiper) //når der skal bruges en plugin 
+        new Vue({
+            el: '#vueapp',
+            data: {
+                swiperOption: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+
+
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    }
+                }
+            }
+        })
+    </script>
+
+
 </section>
 
 <section class="section-citat">
