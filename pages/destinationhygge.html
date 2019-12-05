@@ -16,7 +16,6 @@
       <script src="https://cdn.jsdelivr.net/npm/vue"></script>
       <!-- Swiper JS Vue -->
       <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
-      <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style.css">
 
 <body>
@@ -51,15 +50,15 @@
 
 <section class="section-light-blue">
     <div id="vueapp">
-
         <div class="slide-container">
             <swiper :options="swiperOption">
                 <!-- slides -->
-                <swiper-slide class="slide-1"></swiper-slide>
+                <swiper-slide class="slide-1">
+                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                </swiper-slide>
                 <swiper-slide>I'm Slide 2</swiper-slide>
                 <swiper-slide>I'm Slide 3</swiper-slide>
                 <swiper-slide>I'm Slide 4</swiper-slide>
-                <swiper-slide>I'm Slide 5</swiper-slide>
                 
                 <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
                 <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
@@ -69,11 +68,31 @@
             
 
         </div>
+        <modal v-if="showModal" @close="showModal = false"></modal>
     </div>
 
 
+<!--Modal-->
+    <script type="text/x-template" id="modal-template">
+          <div class="modal-mask">
+            <div class="modal-wrapper">
+              <div class="modal-container">
+                    <video controls>
+                        <source src="../video/presset.mp4" type="video/mp4">    
+                    </video>
+                    <button class="modal-close" @click="$emit('close')">
+                            &#10006
+                    </button>
+                  </slot>
+              </div>
+            </div>
+          </div>
+      </script>
+      
     <script>
-        Vue.use(VueAwesomeSwiper) //når der skal bruges en plugin 
+        Vue.component('modal', {
+        template: '#modal-template'}), 
+        Vue.use(VueAwesomeSwiper), 
         new Vue({
             el: '#vueapp',
             data: {
@@ -90,7 +109,9 @@
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'
                     }
-                }
+                }, 
+
+                showModal: false, 
             }
         })
     </script>
