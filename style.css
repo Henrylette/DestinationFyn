@@ -213,7 +213,7 @@ nav a {
 
 .border-dotted {
     border: dotted 2px #FEFFF7;
-    width: 67%;
+    width: 80%;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
@@ -594,6 +594,30 @@ video {
 
 .slide-4-p {
     background-image: url('images/portraet/potraet4.png');
+}
+
+.badge-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "t t i";
+}
+
+.badge-txt{
+    grid-area: t;
+    margin-left: 15%;
+}
+
+.badge-img{
+    grid-area: i;
+}
+
+.badge-img img{
+    width: 50%;
+    margin-left: 8%;
+}
+
+.badge-btn-wrapper{
+    margin-top: 5%;
 }
 
 /*--GUIDES-SIDE--*/
