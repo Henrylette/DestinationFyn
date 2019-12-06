@@ -30,7 +30,12 @@
 
     <header class="header-orange">
         <div class="header-des-txt">
-            <h1>#Destinationhygge</h1>
+            <div class="header-h1-wrapper">
+            <h1>#Destination<span class="blue-style">hygge</span></h1> 
+        </div>
+        </div>
+        <div class="header-des-img">
+
         </div>
     </header>
 <section class="section-blue">
@@ -49,6 +54,8 @@
 </section>
 
 <section class="section-light-blue">
+
+<!--Slider med billeder-->
     <div id="vueapp">
         <div class="slide-container">
             <swiper :options="swiperOption">
@@ -56,23 +63,20 @@
                 <swiper-slide class="slide-1">
                             <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
                 </swiper-slide>
-                <swiper-slide>I'm Slide 2</swiper-slide>
-                <swiper-slide>I'm Slide 3</swiper-slide>
-                <swiper-slide>I'm Slide 4</swiper-slide>
+                <swiper-slide class="slide-2">Video 2</swiper-slide>
+                <swiper-slide class="slide-3">Video 3</swiper-slide>
+                <swiper-slide class="slide-4">Video 4</swiper-slide>
                 
                 <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
                 <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
                 <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
             </swiper>
-            <!-- Optional controls -->
-            
-
         </div>
         <modal v-if="showModal" @close="showModal = false"></modal>
     </div>
 
 
-<!--Modal-->
+<!--Modal med video 1-->
     <script type="text/x-template" id="modal-template">
           <div class="modal-mask">
             <div class="modal-wrapper">
@@ -88,7 +92,8 @@
             </div>
           </div>
       </script>
-      
+    
+<!--Vue App - Slider + video -->
     <script>
         Vue.component('modal', {
         template: '#modal-template'}), 

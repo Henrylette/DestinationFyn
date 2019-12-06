@@ -10,6 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
+          <!-- Include stylesheet -->
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+          <!-- Include the Swiper library -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+          <!-- Swiper JS Vue -->
+          <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
 
 <body>
     <nav>
@@ -22,10 +29,11 @@
     </nav>
 
     <header class="header-home">
+        <div class="header-img-com-container">
+            <img src="../images/tema1/header-3.png" alt="">
+        </div>
         <div class="header-txt">
-            <h1>Bliv en del af vores Community idag!</h1>
-            <br>
-            <br>
+            <h1>Bliv en del af vores <span class="blue-style">Community</span> idag!</h1> 
             <a class="btn-blue btn-right-margin" href="https://www.airbnb.dk/s/experiences" target="blank"><i class="fab fa-airbnb"></i> OPRET DIN FØRSTE OPLEVELSE!</a>
         </div>
     </header>
@@ -62,7 +70,76 @@
     </section>
 
     <section class="section-light-blue">
+        <!--Slider med billeder-->
+    <div id="vueapp">
+            <div class="slide-container">
+                <swiper :options="swiperOption">
+                    <!-- slides -->
+                    <swiper-slide class="slide-1-p">
+                                <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                    </swiper-slide>
+                    <swiper-slide class="slide-2-p">
+                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                    </swiper-slide>
+                    <swiper-slide class="slide-3-p">
+                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                    </swiper-slide>
+                    <swiper-slide class="slide-4-p">
+                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                    </swiper-slide>
+                    
+                    <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+                    <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+                    <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
+                </swiper>
+            </div>
+            <modal v-if="showModal" @close="showModal = false"></modal>
+        </div>
 
+<!--Modal med video 1-->
+    <script type="text/x-template" id="modal-template">
+        <div class="modal-mask">
+          <div class="modal-wrapper">
+            <div class="modal-container">
+                  <video controls>
+                      <source src="#">    
+                  </video>
+                  <button class="modal-close" @click="$emit('close')">
+                          &#10006
+                  </button>
+                </slot>
+            </div>
+          </div>
+        </div>
+    </script>
+<!--Vue App - Slider + video -->
+<script>
+        Vue.component('modal', {
+        template: '#modal-template'}), 
+        Vue.use(VueAwesomeSwiper), 
+        new Vue({
+            el: '#vueapp',
+            data: {
+                swiperOption: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+
+
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    }
+                }, 
+
+                showModal: false, 
+            }
+        })
+    </script>
+        
     </section>
 
     <footer>
