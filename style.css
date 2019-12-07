@@ -190,7 +190,7 @@ nav a {
 }
 
 .section-citat {
-    background-image: url(images/tema1/burger-wallpaper.jpg);
+    background-image: url("images/tema1/burger-wallpaper.jpg");
     background-size: cover;
     padding-top: 3%;
     padding-bottom: 3%;
