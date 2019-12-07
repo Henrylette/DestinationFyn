@@ -27,13 +27,13 @@
             <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
             <li><a href="../pages/guides.html">Guides</a></li>
             <li><a href="../pages/community.html">Community</a></li>
-            <li><button>Skift tema</button></li>
+            <li><button onclick="changeImageCom()">Skift tema</button></li>
         </ul>
     </nav>
 
     <header class="header-home">
         <div class="header-img-com-container">
-            <img src="../images/tema1/header-3.png" alt="">
+            <img id="community-billede1" src="../images/tema1/header-3.png" alt="">
         </div>
         <div class="header-txt">
             <h1>Bliv en del af vores <span class="blue-style">Community</span> idag!</h1> 
@@ -132,7 +132,7 @@
         
     </section>
 
-    <section class="section-citat">
+    <section id="citat-section" class="section-citat">
             <div class="border-dotted">
                 <div class="border-solid">
                     <div class="citat-wrapper">

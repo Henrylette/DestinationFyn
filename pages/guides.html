@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 
 <body>
     <nav>
@@ -18,12 +19,13 @@
             <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
             <li><a href="../pages/guides.html">Guides</a></li>
             <li><a href="../pages/community.html">Community</a></li>
+            <li><button onclick="changeImageGuides()">Skift tema</button></li>
         </ul>
     </nav>
 
 <header class="header-orange">
         <div class="header-img-guide-container">
-                <img src="../images/tema1/header-2.png" alt="">
+                <img id="guides-billede1" src="../images/tema1/header-2.png" alt="">
         </div>
     <div class="header-txt">
         <h1>Har du brug for lidt <span class="blue-style">inspiration?</span> - Så skal du læse med her!</h1> 
@@ -38,7 +40,7 @@
                 <p class="blue">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto doloribus modi
                     nobis at! Illo quod totam libero minus dolor explicabo corrupti voluptates incidunt provident
                     numquam esse, nihil quae eum quae eum.</p>
-                <div class="btn-des-wrapper"><a onclick="goBack()" class="btn-orange">læs mere</a></div>
+                <div class="btn-des-wrapper"><a class="btn-orange" href="../pages/guide1.html">læs mere</a></div>
             </div>
         </div>
         <div class="guide-card grow">
@@ -92,14 +94,10 @@
                 </div>
         </div>
     </div>
-    <script>
-            function goBack() {
-              window.history.back();
-            }
-    </script>
+
 </section>
 
-<section class="section-citat">
+<section id="citat-section" class="section-citat">
     <div class="border-dotted">
         <div class="border-solid">
             <div class="citat-wrapper">
