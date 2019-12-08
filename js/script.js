@@ -111,3 +111,28 @@
 
     xhttp.open("GET", "../tema.json", true);
     xhttp.send();
+
+
+
+
+
+    function burger() {
+
+        var x = document.getElementById('nav');
+            
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+
+        }
+
+       function ShowNav(){
+            var a = window.innerWidth; 
+            if (a>700){
+                document.getElementById('nav').style.display = "block";
+            } else {
+                document.getElementById('nav').style.display = "none";
+            }
+        }    

@@ -20,16 +20,21 @@
     <script src="../js/script.js" defer></script>
 </head>
 
-<body onload="getThemeIndex('desHygge')">
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
-            <li><a href="../pages/guides.html">Guides</a></li>
-            <li><a href="../pages/community.html">Community</a></li>
-            <li><button onclick="changeImageDesHygge()">Skift tema</button></li>
-        </ul>
-    </nav>
+<body onload="getThemeIndex('desHygge')" onresize="ShowNav()">
+        <nav>
+            <a href="javascript:void(0);" onclick="burger()">
+                <i id="burger-icon" class="fas fa-bars"></i>
+            </a>
+
+            <ul id="nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
+                <li><a href="../pages/guides.html">Guides</a></li>
+                <li><a href="../pages/community.html">Community</a></li>
+                <li><button onclick="changeImageIndex()">Skift tema</button></li>
+            </ul>
+
+        </nav>
 
     <header class="header-orange">
             <img id="destinationhygge-billede2" src="../images/tema1/header-1.png" alt="">

@@ -12,16 +12,21 @@
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 
-<body onload="getThemeIndex('guide')">
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
-            <li><a href="../pages/guides.html">Guides</a></li>
-            <li><a href="../pages/community.html">Community</a></li>
-            <li><button onclick="changeImageGuides()">Skift tema</button></li>
-        </ul>
-    </nav>
+<body onload="getThemeIndex('guide')" onresize="ShowNav()">
+        <nav>
+            <a href="javascript:void(0);" onclick="burger()" onresize="ShowNav()">
+                <i id="burger-icon" class="fas fa-bars"></i>
+            </a>
+
+            <ul id="nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
+                <li class="active"><a href="../pages/guides.html">Guides</a></li>
+                <li><a href="../pages/community.html">Community</a></li>
+                <li><button onclick="changeImageIndex()">Skift tema</button></li>
+            </ul>
+
+        </nav>
 
 <header class="header-orange">
 
@@ -29,7 +34,7 @@
                 <img id="guides-billede1" src="../images/tema1/header-2.png" alt="">
         </div>
     <div class="header-guide-txt">
-            <img id="guides-billede2" src="../images/tema1/header-2.png" alt="">
+         <img id="guides-billede2" src="../images/tema1/header-2.png" alt="">
         <h1>Har du brug for lidt <span class="blue-style">inspiration?</span> - Så skal du læse med her!</h1> 
     </div>
 </header>

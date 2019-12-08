@@ -34,21 +34,6 @@ h2 {
     text-align: center;
 }
 
-@media screen and (max-width: 550px) {
-    h1 {
-        font-size: 20pt;
-    }
-
-    h2 {
-        font-size: 12pt;
-    }
-
-    .h2-blue {
-        font-size: 20pt;
-    }
-}
-
-
 .h2-blue-1 {
     font-family: 'Bowlby One', cursive;
     color: #215D73;
@@ -89,12 +74,43 @@ p {
     font-size: 11pt;
 }
 
+
 .blue {
     font-family: 'Varela Round', sans-serif;
     color: #215D73;
     font-size: 11pt;
 }
 
+@media screen and (max-width: 800px){
+    h2{
+        font-size: 15pt;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 20pt;
+    }
+
+    h2 {
+        font-size: 12pt;
+    }
+
+    .h2-blue {
+        font-size: 20pt;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    h1{
+        font-size: 15pt;
+    }
+
+    .h3-white{
+        font-size: 15pt;
+    }
+}
 /*--NAVIGATION--*/
 
 nav {
@@ -106,9 +122,16 @@ nav {
     position: fixed;
 }
 
+
 nav li {
-    display: inline;
     padding: 30px;
+    display: inline; 
+    padding-bottom: 5px;
+    border-bottom: 5px solid transparent;
+}
+
+nav li:hover{
+    border-bottom: 5px solid #FFE9C6;
 }
 
 nav a {
@@ -117,6 +140,52 @@ nav a {
     font-size: 10pt;
 }
 
+.active{
+   border-bottom: 5px solid #FFE9C6;
+}
+
+
+
+#burger-icon{
+    color: #FEFFF7; 
+    font-size: 25pt;
+    display: none;
+}
+
+#nav{
+    display: block;
+}
+
+@media screen and (max-width: 700px){
+  
+    #burger-icon{
+        display: block;
+    }
+
+    nav li {
+        display: block; 
+    }
+
+    nav li:hover{
+        background-color: #215D73;
+        border-bottom: 5px solid transparent; 
+    }
+
+    #nav{
+        display: none;
+    }
+
+    nav a{
+        font-size: 15pt;
+    }
+
+    .active{
+        border-bottom: 5px solid #215D73; 
+        background-color: #215D73;
+     }
+
+
+}
 /*--BUTTONS--*/
 .btn-blue {
     background-color: #215D73;
@@ -175,6 +244,22 @@ nav a {
     background-color: rgb(247, 201, 148);
 }
 
+
+@media screen and (max-width: 450px){
+    .btn-blue{
+        font-size: 10pt;
+        padding: 10px 10px;
+    }
+
+    .btn-yellow {
+        font-size: 10pt;
+    }
+
+    .btn-orange {
+        font-size: 10pt;
+    }
+}
+
 /*--SECTIONS--*/
 .section-blue {
     background-color: #215D73;
@@ -201,6 +286,13 @@ nav a {
 .header-orange {
     background-color: #F6B771;
     height: 100vh;
+}
+
+@media screen and (max-width: 500px){
+    .section-blue {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
 }
 
 /*-citat-*/
@@ -445,6 +537,13 @@ footer {
     }
 }
 
+@media screen and (max-width: 450px){
+    #destinationhygge-billede2{
+        padding-top: 50%;
+        margin-bottom: -20%;
+    }
+}
+
 
 .loacl-h3 {
     column-span: all;
@@ -456,6 +555,12 @@ footer {
     column-gap: 40px;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+@media screen and (max-width: 800px){
+    .local-txt{
+        column-count: 1;
+    }
 }
 
 /*Vue-slider*/
@@ -615,6 +720,12 @@ video {
     margin-top: 3%;
 }
 
+@media screen and (max-width: 550px){
+    .com-btn-wrapper{
+        margin-top: 6%;
+    }
+}
+
 .slide-1-p {
     background-image: url('images/portraet/potreat1.png');
 }
@@ -655,6 +766,34 @@ video {
     margin-top: 5%;
 }
 
+@media screen and (max-width: 550px){
+    .badge-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "i"
+        "t";
+        }
+    .badge-img{
+        grid-area: i;
+        }
+
+    .badge-img img{
+        display: table;
+        margin: auto;
+        margin-bottom: 5%;
+     }
+
+    .badge-txt{
+            grid-area: t;
+            margin-right: 10%;
+            margin-left: 10%;
+            text-align: center;
+        }
+
+    .badge-btn-wrapper{
+            margin-top: 8%;
+    }
+}
 /*--GUIDES-SIDE--*/
 .header-guide-txt {
     padding-left: 10%;
@@ -699,10 +838,13 @@ video {
         text-align: center;
     }
 }
+
 .guide-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+    max-width: 1350px;
+    margin: auto;
 }
 
 .guide-card {
@@ -711,6 +853,12 @@ video {
     border-radius: 10px;
     text-align: left;
     margin: 15px;
+}
+
+@media screen and (max-width: 500px){
+    .guide-card{
+        width: 260px;
+    }
 }
 
 .grow {

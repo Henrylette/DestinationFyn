@@ -12,14 +12,20 @@
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
-            <li><a href="../pages/guides.html">Guides</a></li>
-            <li><a href="../pages/community.html">Community</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="javascript:void(0);" onclick="burger()" onresize="ShowNav()">
+                <i id="burger-icon" class="fas fa-bars"></i>
+            </a>
+
+            <ul id="nav">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
+                <li class="active"><a href="../pages/guides.html">Guides</a></li>
+                <li><a href="../pages/community.html">Community</a></li>
+                <li><button onclick="changeImageIndex()">Skift tema</button></li>
+            </ul>
+
+        </nav>
 
     <section class="section-blue">
         <div class="guide1-container">

@@ -20,15 +20,20 @@
     <script src="../js/script.js" defer></script>
 </head>
 
-<body onload="getThemeIndex('com')">
+<body onload="getThemeIndex('com')" onresize="ShowNav()">
     <nav>
-        <ul>
+        <a href="javascript:void(0);" onclick="burger()">
+            <i id="burger-icon" class="fas fa-bars"></i>
+        </a>
+
+        <ul id="nav">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
             <li><a href="../pages/guides.html">Guides</a></li>
-            <li><a href="../pages/community.html">Community</a></li>
-            <li><button onclick="changeImageCom()">Skift tema</button></li>
+            <li class="active"><a href="../pages/community.html">Community</a></li>
+            <li><button onclick="changeImageIndex()">Skift tema</button></li>
         </ul>
+
     </nav>
 
     <header class="header-home">
@@ -38,7 +43,7 @@
         <div class="header-txt">
                 <img id="community-billede2" class="header-img-com" src="../images/tema1/header-3.png" alt="">
             <h1>Bliv en del af vores <span class="blue-style">Community</span> idag!</h1> 
-            <a class="btn-blue btn-right-margin" href="https://www.airbnb.dk/s/experiences" target="blank"><i class="fab fa-airbnb"></i> OPRET OPLEVELSE!</a>
+            <a class="btn-blue btn-right-margin" href="https://www.airbnb.dk/s/experiences" target="blank"><i class="fab fa-airbnb"></i> OPRET din første OPLEVELSE!</a>
         </div>
     </header>
 

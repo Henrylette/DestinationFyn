@@ -11,15 +11,20 @@
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
-<body onload="getThemeIndex('index')">
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
+<body onload="getThemeIndex('index')" onresize="ShowNav()">
+    <nav >
+        <a href="javascript:void(0);" onclick="burger()">
+            <i id="burger-icon" class="fas fa-bars"></i>
+        </a>
+           
+        <ul id="nav">
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="pages/destinationhygge.html">#DestinationHygge</a></li>
             <li><a href="pages/guides.html">Guides</a></li>
             <li><a href="pages/community.html">Community</a></li>
             <li><button onclick="changeImageIndex()">Skift tema</button></li>
         </ul>
+
     </nav>
 
     <header class="header-home">
