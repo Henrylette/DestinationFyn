@@ -40,21 +40,25 @@
     "deshygge": [
         {
             "billede1": "../images/tema1/header-1.png",
+            "billede2": "../images/tema1/header-1.png",
             "bg": "url(../images/tema1/burger-wallpaper.jpg)"
         }, 
 
         {
             "billede1": "../images/tema2/header-1.png",
+            "billede2": "../images/tema2/header-1.png",
             "bg": "url(../images/tema2/brik-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema3/header-1.png",
+            "billede2": "../images/tema3/header-1.png",
             "bg": "url(../images/tema3/avocado-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema4/header-1.png",
+            "billede2": "../images/tema3/header-1.png",
             "bg": "url(../images/tema4/lassagne-wallpaper.png)"
         }
 
@@ -63,21 +67,25 @@
     "guides": [
         {
             "billede1": "../images/tema1/header-2.png",
+            "billede2": "../images/tema1/header-2.png",
             "bg": "url(../images/tema1/burger-wallpaper.jpg)"
         }, 
 
         {
             "billede1": "../images/tema2/header-2.png",
+            "billede2": "../images/tema2/header-2.png",
             "bg": "url(../images/tema2/brik-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema3/header-2.png",
+            "billede2": "../images/tema3/header-2.png",
             "bg": "url(../images/tema3/avocado-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema4/header-2.png",
+            "billede2": "../images/tema4/header-2.png",
             "bg": "url(../images/tema4/lassagne-wallpaper.png)"
         }
     ], 
@@ -85,21 +93,25 @@
     "community": [
         {
             "billede1": "../images/tema1/header-3.png",
+            "billede2": "../images/tema1/header-3.png",
             "bg": "url(../images/tema1/burger-wallpaper.jpg)"
         }, 
 
         {
             "billede1": "../images/tema2/header-3.png",
+            "billede2": "../images/tema2/header-3.png",
             "bg": "url(../images/tema2/brik-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema3/header-3.png",
+            "billede2": "../images/tema3/header-3.png",
             "bg": "url(../images/tema3/avocado-wallpaper.png)"
         }, 
 
         {
             "billede1": "../images/tema4/header-3.png",
+            "billede2": "../images/tema4/header-3.png",
             "bg": "url(../images/tema4/lassagne-wallpaper.png)"
         }
     ]

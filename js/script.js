@@ -11,9 +11,6 @@
    
 
 
-
-
-
  
     ThemeIndex = 0; 
 
@@ -76,6 +73,7 @@
 
          sessionStorage.setItem("Index", ThemeIndex); 
          document.getElementById('destinationhygge-billede1').src = data.deshygge[ThemeIndex].billede1;
+         document.getElementById('destinationhygge-billede2').src = data.deshygge[ThemeIndex].billede2;
          document.getElementById('citat-section').style.backgroundImage = data.deshygge[ThemeIndex].bg;
 }
 
@@ -89,6 +87,7 @@
 
         sessionStorage.setItem("Index", ThemeIndex); 
         document.getElementById('guides-billede1').src = data.guides[ThemeIndex].billede1;
+        document.getElementById('guides-billede2').src = data.guides[ThemeIndex].billede2;
         document.getElementById('citat-section').style.backgroundImage = data.guides[ThemeIndex].bg;
 
     }
@@ -103,7 +102,9 @@
 
     sessionStorage.setItem("Index", ThemeIndex); 
     document.getElementById('community-billede1').src = data.community[ThemeIndex].billede1;
+    document.getElementById('community-billede2').src = data.community[ThemeIndex].billede2;
     document.getElementById('citat-section').style.backgroundImage = data.community[ThemeIndex].bg;
+    
 
 }
 

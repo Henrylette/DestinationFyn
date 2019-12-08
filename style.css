@@ -180,6 +180,7 @@ nav a {
     background-color: #215D73;
     padding-top: 5%;
     padding-bottom: 5%;
+    position: relative;
 }
 
 .section-light-blue {
@@ -426,6 +427,24 @@ footer {
 
 }
 
+#destinationhygge-billede2{
+    display: none;
+   }
+
+@media screen and (max-width: 1024px) {
+    .header-des-img img{
+       display: none;
+    }
+
+    #destinationhygge-billede2{
+        display: table;
+        width: 90%;
+        margin: auto;
+        padding-top: 20%;
+        margin-bottom: -15%;
+    }
+}
+
 
 .loacl-h3 {
     column-span: all;
@@ -556,7 +575,7 @@ video {
 }
 
 
-/*--COMMUNITY-SIDE--*/
+/*--COMMUNITY SIDE--*/
 
 .header-img-com-container {
     width: 50%;
@@ -567,9 +586,28 @@ video {
 .header-img-com-container img {
     width: 47.5%;
     position: absolute;
-    top: 53%;
     right: 5%;
-    transform: translateY(-50%);
+    bottom: 0;
+    transform: translateY(-50%, -50%);
+}
+
+.header-img-com{
+    display: none;
+}
+
+
+@media screen and (max-width: 1030px) {
+    .header-img-com-container img{
+        display: none;
+    }
+
+    .header-img-com{
+        display: table; 
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5%;
+        margin-top: -10%;
+    }
 }
 
 .com-btn-wrapper {
@@ -619,27 +657,48 @@ video {
 
 /*--GUIDES-SIDE--*/
 .header-guide-txt {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 18%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 80%;
 }
 
 .header-img-guide-container {
-    width: 50%;
-    float: right;
-    height: 100vh;
-}
-
-.header-img-guide-container img {
-    width: 37%;
+    width: 40%;
     position: absolute;
-    top: 53%;
-    right: 10%;
+    top: 60%;
+    right: 0;
     transform: translateY(-50%);
 }
 
+.header-img-guide-container img {
+    width: 100%;
+}
+
+#guides-billede2{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    .header-img-guide-container img{
+        display: none;
+    }
+
+    #guides-billede2{
+        display: table;
+        width: 70%;
+        margin: auto;
+        margin-top: -20%; 
+        padding-bottom: 5%;
+    }
+
+    .header-guide-txt {
+        width: 100%;
+        text-align: center;
+    }
+}
 .guide-container {
     display: flex;
     justify-content: center;
@@ -689,9 +748,6 @@ video {
 }
 
 /*--GUIDE1-SIDE--*/
-
-
-
 .guide1-container {
     background-color: #FEFFF7;
     width: 80%;
