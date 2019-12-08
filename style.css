@@ -940,6 +940,7 @@ video {
     margin: auto;
 }
 
+
 .guide1-text {
     margin-left: 12%;
     margin-right: 12%;
@@ -979,4 +980,49 @@ video {
 .close a {
     color: #215D73;
     text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+    .guide1-header-img img{
+        display: none;
+    }
+
+    .guide1-header-txt{
+        width: 100%;
+    }
+
+    .guide1-number{
+        width: 7%;
+    }
+
+    .guide1-guidetekst {
+        width: 93%;
+    }
+  
+    .guide1-text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .btn-guide1-wrapper{
+        margin-top: 97%; 
+    }
+}
+
+
+@media screen and (max-width: 450px){
+
+    .guide1-number{
+        width: 100%;
+        height: 50px;
+    }
+
+    .guide1-guidetekst{
+        text-align: justify;
+        width: 100%;
+    }
+
+    .guide1-container{
+        width: 90%;
+    }
 }
