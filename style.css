@@ -81,8 +81,8 @@ p {
     font-size: 11pt;
 }
 
-@media screen and (max-width: 800px){
-    h2{
+@media screen and (max-width: 800px) {
+    h2 {
         font-size: 15pt;
     }
 }
@@ -102,15 +102,16 @@ p {
 }
 
 
-@media screen and (max-width: 450px){
-    h1{
+@media screen and (max-width: 450px) {
+    h1 {
         font-size: 15pt;
     }
 
-    .h3-white{
+    .h3-white {
         font-size: 15pt;
     }
 }
+
 /*--NAVIGATION--*/
 
 nav {
@@ -125,12 +126,12 @@ nav {
 
 nav li {
     padding: 30px;
-    display: inline; 
+    display: inline;
     padding-bottom: 5px;
     border-bottom: 5px solid transparent;
 }
 
-nav li:hover{
+nav li:hover {
     border-bottom: 5px solid #FFE9C6;
 }
 
@@ -140,52 +141,53 @@ nav a {
     font-size: 10pt;
 }
 
-.active{
-   border-bottom: 5px solid #FFE9C6;
+.active {
+    border-bottom: 5px solid #FFE9C6;
 }
 
 
 
-#burger-icon{
-    color: #FEFFF7; 
+#burger-icon {
+    color: #FEFFF7;
     font-size: 25pt;
     display: none;
 }
 
-#nav{
+#nav {
     display: block;
 }
 
-@media screen and (max-width: 700px){
-  
-    #burger-icon{
+@media screen and (max-width: 700px) {
+
+    #burger-icon {
         display: block;
     }
 
     nav li {
-        display: block; 
+        display: block;
     }
 
-    nav li:hover{
+    nav li:hover {
         background-color: #215D73;
-        border-bottom: 5px solid transparent; 
+        border-bottom: 5px solid transparent;
     }
 
-    #nav{
+    #nav {
         display: none;
     }
 
-    nav a{
+    nav a {
         font-size: 15pt;
     }
 
-    .active{
-        border-bottom: 5px solid #215D73; 
+    .active {
+        border-bottom: 5px solid #215D73;
         background-color: #215D73;
-     }
+    }
 
 
 }
+
 /*--BUTTONS--*/
 .btn-blue {
     background-color: #215D73;
@@ -245,8 +247,8 @@ nav a {
 }
 
 
-@media screen and (max-width: 450px){
-    .btn-blue{
+@media screen and (max-width: 450px) {
+    .btn-blue {
         font-size: 10pt;
         padding: 10px 10px;
     }
@@ -288,7 +290,7 @@ nav a {
     height: 100vh;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .section-blue {
         padding-top: 10%;
         padding-bottom: 10%;
@@ -449,69 +451,153 @@ nav a {
 /*--FOOTER--*/
 footer {
     background-color: #1D3036;
-    color: #FEFFF7;
     padding-top: 4%;
     padding-bottom: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: center;
-    padding-left: 2%;
-    flex-wrap: wrap;
-}
-
-.footer-box {
-    margin-right: 5%;
-}
-
-.footer-box ul {
-    list-style-type: none;
-}
-
-.footer-box a {
-    font-size: 10pt;
-    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "s g g v p c f";
     color: #FEFFF7;
 }
 
-.footer-some {
-    margin-top: 5px;
+.footer-container ul {
+    list-style-type: none;
 }
 
-.footer-some li {
+.footer-container a {
+    color: #FEFFF7;
+    text-decoration: none;
+}
+
+.footer-box-samarbejde {
+    grid-area: s;
+    font-size: 10pt;
+    padding-top: 2%;
+}
+
+.footer-box-guides {
+    grid-area: g;
+    font-size: 10pt;
+}
+
+
+.footer-box-video {
+    grid-area: v;
+    font-size: 10pt;
+}
+
+.footer-box-portrætter {
+    grid-area: p;
+    font-size: 10pt;
+}
+
+.footer-box-community {
+    grid-area: c;
+    font-size: 10pt;
+}
+
+.footer-box-follow {
+    grid-area: f;
+    font-size: 15pt;
+}
+
+.footer-box-follow li {
     display: inline;
 }
 
-.footer-some a {
-    font-size: 18pt;
-    margin-right: 5px;
+@media screen and (max-width: 950px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "s g g v"
+            "p c c f";
+        text-align: center;
+    }
+
+    .footer-box-samarbejde {
+        grid-area: s;
+        margin-bottom: 3%;
+    }
+
+    .footer-box-guides {
+        grid-area: g;
+        margin-bottom: 3%;
+    }
+
+
+    .footer-box-video {
+        grid-area: v;
+        margin-bottom: 3%;
+    }
+
+    .footer-box-portrætter {
+        grid-area: p;
+    }
+
+    .footer-box-community {
+        grid-area: c;
+    }
+
+    .footer-box-follow {
+        grid-area: f;
+    }
+
 }
 
-@media screen and (max-width: 1024px) {
-    .footer-box {
-        margin-right: 1%;
+@media screen and (max-width: 450px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "s"
+            "g"
+            "v"
+            "p"
+            "c"
+            "c"
+            "f";
     }
+
+    .footer-box-portrætter {
+        grid-area: p;
+        margin-bottom: 3%;
+    }
+
+    .footer-box-community {
+        grid-area: c;
+        margin-bottom: 3%;
+    }
+
+    .footer-box-follow {
+        grid-area: f;
+        margin-bottom: 3%;
+    }
+
+
 }
+
 
 
 /*--#DESTINATIONHYGGE-SIDE--*/
 
-.header-des-img h1{
+.header-des-img h1 {
     position: absolute;
     top: 15%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.header-des-img{
+.header-des-img {
     position: relative;
     height: 100vh;
     width: 100%;
 }
 
 
-.header-des-img img{
+.header-des-img img {
     position: absolute;
     left: 20%;
     bottom: 0;
@@ -519,16 +605,16 @@ footer {
 
 }
 
-#destinationhygge-billede2{
+#destinationhygge-billede2 {
     display: none;
-   }
+}
 
 @media screen and (max-width: 1024px) {
-    .header-des-img img{
-       display: none;
+    .header-des-img img {
+        display: none;
     }
 
-    #destinationhygge-billede2{
+    #destinationhygge-billede2 {
         display: table;
         width: 90%;
         margin: auto;
@@ -537,8 +623,8 @@ footer {
     }
 }
 
-@media screen and (max-width: 450px){
-    #destinationhygge-billede2{
+@media screen and (max-width: 450px) {
+    #destinationhygge-billede2 {
         padding-top: 50%;
         margin-bottom: -20%;
     }
@@ -557,8 +643,8 @@ footer {
     margin-right: 10%;
 }
 
-@media screen and (max-width: 800px){
-    .local-txt{
+@media screen and (max-width: 800px) {
+    .local-txt {
         column-count: 1;
     }
 }
@@ -696,18 +782,18 @@ video {
     transform: translateY(-50%, -50%);
 }
 
-.header-img-com{
+.header-img-com {
     display: none;
 }
 
 
 @media screen and (max-width: 1030px) {
-    .header-img-com-container img{
+    .header-img-com-container img {
         display: none;
     }
 
-    .header-img-com{
-        display: table; 
+    .header-img-com {
+        display: table;
         width: 80%;
         margin: auto;
         margin-bottom: 5%;
@@ -720,8 +806,8 @@ video {
     margin-top: 3%;
 }
 
-@media screen and (max-width: 550px){
-    .com-btn-wrapper{
+@media screen and (max-width: 550px) {
+    .com-btn-wrapper {
         margin-top: 6%;
     }
 }
@@ -742,58 +828,60 @@ video {
     background-image: url('images/portraet/potraet4.png');
 }
 
-.badge-container{
+.badge-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "t t i";
 }
 
-.badge-txt{
+.badge-txt {
     grid-area: t;
     margin-left: 15%;
 }
 
-.badge-img{
+.badge-img {
     grid-area: i;
 }
 
-.badge-img img{
+.badge-img img {
     width: 50%;
     margin-left: 8%;
 }
 
-.badge-btn-wrapper{
+.badge-btn-wrapper {
     margin-top: 5%;
 }
 
-@media screen and (max-width: 550px){
-    .badge-container{
+@media screen and (max-width: 550px) {
+    .badge-container {
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "i"
-        "t";
-        }
-    .badge-img{
-        grid-area: i;
-        }
+        grid-template-areas:
+            "i"
+            "t";
+    }
 
-    .badge-img img{
+    .badge-img {
+        grid-area: i;
+    }
+
+    .badge-img img {
         display: table;
         margin: auto;
         margin-bottom: 5%;
-     }
+    }
 
-    .badge-txt{
-            grid-area: t;
-            margin-right: 10%;
-            margin-left: 10%;
-            text-align: center;
-        }
+    .badge-txt {
+        grid-area: t;
+        margin-right: 10%;
+        margin-left: 10%;
+        text-align: center;
+    }
 
-    .badge-btn-wrapper{
-            margin-top: 8%;
+    .badge-btn-wrapper {
+        margin-top: 8%;
     }
 }
+
 /*--GUIDES-SIDE--*/
 .header-guide-txt {
     padding-left: 10%;
@@ -816,20 +904,20 @@ video {
     width: 100%;
 }
 
-#guides-billede2{
+#guides-billede2 {
     display: none;
 }
 
-@media screen and (max-width: 1024px){
-    .header-img-guide-container img{
+@media screen and (max-width: 1024px) {
+    .header-img-guide-container img {
         display: none;
     }
 
-    #guides-billede2{
+    #guides-billede2 {
         display: table;
         width: 70%;
         margin: auto;
-        margin-top: -20%; 
+        margin-top: -20%;
         padding-bottom: 5%;
     }
 
@@ -842,7 +930,7 @@ video {
 .guide-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     max-width: 1350px;
     margin: auto;
 }
@@ -855,8 +943,8 @@ video {
     margin: 15px;
 }
 
-@media screen and (max-width: 500px){
-    .guide-card{
+@media screen and (max-width: 500px) {
+    .guide-card {
         width: 260px;
     }
 }
@@ -982,47 +1070,47 @@ video {
     text-decoration: none;
 }
 
-@media screen and (max-width: 800px){
-    .guide1-header-img img{
+@media screen and (max-width: 800px) {
+    .guide1-header-img img {
         display: none;
     }
 
-    .guide1-header-txt{
+    .guide1-header-txt {
         width: 100%;
     }
 
-    .guide1-number{
+    .guide1-number {
         width: 7%;
     }
 
     .guide1-guidetekst {
         width: 93%;
     }
-  
-    .guide1-text{
+
+    .guide1-text {
         margin-left: 5%;
         margin-right: 5%;
     }
 
-    .btn-guide1-wrapper{
-        margin-top: 97%; 
+    .btn-guide1-wrapper {
+        margin-top: 97%;
     }
 }
 
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
 
-    .guide1-number{
+    .guide1-number {
         width: 100%;
         height: 50px;
     }
 
-    .guide1-guidetekst{
+    .guide1-guidetekst {
         text-align: justify;
         width: 100%;
     }
 
-    .guide1-container{
+    .guide1-container {
         width: 90%;
     }
 }

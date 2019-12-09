@@ -10,22 +10,23 @@
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f8c369dae8.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 
-<body>
-        <nav>
-            <a href="javascript:void(0);" onclick="burger()" onresize="ShowNav()">
-                <i id="burger-icon" class="fas fa-bars"></i>
-            </a>
+<body onresize="ShowNav()">
+    <nav>
+        <a href="javascript:void(0);" onclick="burger()">
+            <i id="burger-icon" class="fas fa-bars"></i>
+        </a>
 
-            <ul id="nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
-                <li class="active"><a href="../pages/guides.html">Guides</a></li>
-                <li><a href="../pages/community.html">Community</a></li>
-                <li><button onclick="changeImageIndex()">Skift tema</button></li>
-            </ul>
+        <ul id="nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
+            <li class="active"><a href="../pages/guides.html">Guides</a></li>
+            <li><a href="../pages/community.html">Community</a></li>
+            <li><button onclick="changeImageIndex()">Skift tema</button></li>
+        </ul>
 
-        </nav>
+    </nav>
 
     <section class="section-blue">
         <div class="guide1-container">
@@ -105,14 +106,14 @@
 
     <footer>
         <div class="footer-container">
-            <div class="footer-box">
+            <div class="footer-box-samarbejde">
                 <h6>Samarbejde</h6>
                 <ul>
                     <li><a href="">Destination FYN</a></li>
                     <li><a href="">AirBnb Denmark</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-guides">
                 <h6>Guides</h6>
                 <ul>
                     <li><a href="">Hvordan er man en god vært? </a></li>
@@ -121,7 +122,7 @@
                     <li><a href="">Hvis uheldet er ude?</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-video">
                 <h6>#Video</h6>
                 <ul>
                     <li><a href="">#presset</a></li>
@@ -131,7 +132,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-portrætter">
                 <h6>Portrætter</h6>
                 <ul>
                     <li><a href="">Carla Ibsen</a></li>
@@ -141,7 +142,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-community">
                 <h6>Community</h6>
                 <ul>
                     <li><a href="">Facebook gruppe</a></li>
@@ -150,7 +151,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-follow">
                 <h6>Følg os</h6>
                 <ul class="footer-some">
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -161,4 +162,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -41,9 +41,10 @@
             <img id="community-billede1" src="../images/tema1/header-3.png" alt="">
         </div>
         <div class="header-txt">
-                <img id="community-billede2" class="header-img-com" src="../images/tema1/header-3.png" alt="">
-            <h1>Bliv en del af vores <span class="blue-style">Community</span> idag!</h1> 
-            <a class="btn-blue btn-right-margin" href="https://www.airbnb.dk/s/experiences" target="blank"><i class="fab fa-airbnb"></i> OPRET din første OPLEVELSE!</a>
+            <img id="community-billede2" class="header-img-com" src="../images/tema1/header-3.png" alt="">
+            <h1>Bliv en del af vores <span class="blue-style">Community</span> idag!</h1>
+            <a class="btn-blue btn-right-margin" href="https://www.airbnb.dk/s/experiences" target="blank"><i
+                    class="fab fa-airbnb"></i> OPRET din første OPLEVELSE!</a>
         </div>
     </header>
 
@@ -61,29 +62,33 @@
             </p>
         </div>
         <div class="com-btn-wrapper">
-        <a href="https://www.facebook.com" target="blank" class="btn-orange">JOIN GRUPPEN PÅ FACEBOOK</a>
-    </div>
+            <a href="https://www.facebook.com" target="blank" class="btn-orange">JOIN GRUPPEN PÅ FACEBOOK</a>
+        </div>
     </section>
 
     <section class="section-light-blue">
         <!--Slider med billeder-->
-    <div id="vueapp">
+        <div id="vueapp">
             <div class="slide-container">
                 <swiper :options="swiperOption">
                     <!-- slides -->
                     <swiper-slide class="slide-1-p">
-                                <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                        <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i
+                                    class="fas fa-play"></i></span></button>
                     </swiper-slide>
                     <swiper-slide class="slide-2-p">
-                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                        <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i
+                                    class="fas fa-play"></i></span></button>
                     </swiper-slide>
                     <swiper-slide class="slide-3-p">
-                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                        <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i
+                                    class="fas fa-play"></i></span></button>
                     </swiper-slide>
                     <swiper-slide class="slide-4-p">
-                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
+                        <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i
+                                    class="fas fa-play"></i></span></button>
                     </swiper-slide>
-                    
+
                     <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
                     <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
                     <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
@@ -92,9 +97,9 @@
             <modal v-if="showModal" @close="showModal = false"></modal>
         </div>
 
-<!--Modal med video 1-->
-    <script type="text/x-template" id="modal-template">
-        <div class="modal-mask">
+        <!--Modal med video 1-->
+        <script type="text/x-template" id="modal-template">
+            <div class="modal-mask">
           <div class="modal-wrapper">
             <div class="modal-container">
                   <video controls>
@@ -108,75 +113,78 @@
           </div>
         </div>
     </script>
-<!--Vue App - Slider + video -->
-<script>
-        Vue.component('modal', {
-        template: '#modal-template'}), 
-        Vue.use(VueAwesomeSwiper), 
-        new Vue({
-            el: '#vueapp',
-            data: {
-                swiperOption: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+        <!--Vue App - Slider + video -->
+        <script>
+            Vue.component('modal', {
+                    template: '#modal-template'
+                }),
+                Vue.use(VueAwesomeSwiper),
+                new Vue({
+                    el: '#vueapp',
+                    data: {
+                        swiperOption: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
 
 
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev'
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev'
+                            }
+                        },
+
+                        showModal: false,
                     }
-                }, 
+                })
+        </script>
 
-                showModal: false, 
-            }
-        })
-    </script>
-        
     </section>
 
     <section id="citat-section" class="section-citat">
-            <div class="border-dotted">
-                <div class="border-solid">
-                    <div class="citat-wrapper">
-                        <h2>“Jeg har større mulighed for selv at 
-                                tilpasse min arbejdstid, i forhold 
-                                til almindelige studiejobs“</h2>
-                                <p>- Louise Hansen, IVK Studerende</p>
-                    </div>
+        <div class="border-dotted">
+            <div class="border-solid">
+                <div class="citat-wrapper">
+                    <h2>“Jeg har større mulighed for selv at
+                        tilpasse min arbejdstid, i forhold
+                        til almindelige studiejobs“</h2>
+                    <p>- Louise Hansen, IVK Studerende</p>
                 </div>
             </div>
-        </section>
-<section class="section-blue">
-    <div class="badge-container">
-        <div class="badge-content badge-txt">
-            <h3 class="h3-white">masser af fordele med vores certificerings badge!</h3>
-            <p>Når du har hostet de første 3 oplevelser for turister, vil du automatisk modtage dette digitale badge som
-                du kan bruge på alle dine sociale medier. Med badget følger en masse fordele - bl.a. gode rabatter hos
-                vores samarbejdspartnere. </p>
+        </div>
+    </section>
+    <section class="section-blue">
+        <div class="badge-container">
+            <div class="badge-content badge-txt">
+                <h3 class="h3-white">masser af fordele med vores certificerings badge!</h3>
+                <p>Når du har hostet de første 3 oplevelser for turister, vil du automatisk modtage dette digitale badge
+                    som
+                    du kan bruge på alle dine sociale medier. Med badget følger en masse fordele - bl.a. gode rabatter
+                    hos
+                    vores samarbejdspartnere. </p>
                 <div class="badge-btn-wrapper">
-                <a class="btn-orange" href="#">Se alle fordelene her</a>
+                    <a class="btn-orange" href="#">Se alle fordelene her</a>
+                </div>
+            </div>
+            <div class="badge-content badge-img">
+                <img src="../images/icons/badge.png" alt="">
             </div>
         </div>
-        <div class="badge-content badge-img">
-            <img src="../images/icons/badge.png" alt="">
-        </div>
-    </div>
-</section>
+    </section>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-box">
+            <div class="footer-box-samarbejde">
                 <h6>Samarbejde</h6>
                 <ul>
                     <li><a href="">Destination FYN</a></li>
                     <li><a href="">AirBnb Denmark</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-guides">
                 <h6>Guides</h6>
                 <ul>
                     <li><a href="">Hvordan er man en god vært? </a></li>
@@ -185,7 +193,7 @@
                     <li><a href="">Hvis uheldet er ude?</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-video">
                 <h6>#Video</h6>
                 <ul>
                     <li><a href="">#presset</a></li>
@@ -195,7 +203,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-portrætter">
                 <h6>Portrætter</h6>
                 <ul>
                     <li><a href="">Carla Ibsen</a></li>
@@ -205,7 +213,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-community">
                 <h6>Community</h6>
                 <ul>
                     <li><a href="">Facebook gruppe</a></li>
@@ -214,7 +222,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-follow">
                 <h6>Følg os</h6>
                 <ul class="footer-some">
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -225,4 +233,5 @@
         </div>
     </footer>
 </body>
+
 </html>

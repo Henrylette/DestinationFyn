@@ -21,69 +21,74 @@
 </head>
 
 <body onload="getThemeIndex('desHygge')" onresize="ShowNav()">
-        <nav>
-            <a href="javascript:void(0);" onclick="burger()">
-                <i id="burger-icon" class="fas fa-bars"></i>
-            </a>
+    <nav>
+        <a href="javascript:void(0);" onclick="burger()">
+            <i id="burger-icon" class="fas fa-bars"></i>
+        </a>
 
-            <ul id="nav">
-                <li><a href="../index.html">Home</a></li>
-                <li class="active"><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
-                <li><a href="../pages/guides.html">Guides</a></li>
-                <li><a href="../pages/community.html">Community</a></li>
-                <li><button onclick="changeImageIndex()">Skift tema</button></li>
-            </ul>
+        <ul id="nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="../pages/destinationhygge.html">#DestinationHygge</a></li>
+            <li><a href="../pages/guides.html">Guides</a></li>
+            <li><a href="../pages/community.html">Community</a></li>
+            <li><button onclick="changeImageIndex()">Skift tema</button></li>
+        </ul>
 
-        </nav>
+    </nav>
 
     <header class="header-orange">
-            <img id="destinationhygge-billede2" src="../images/tema1/header-1.png" alt="">
+        <img id="destinationhygge-billede2" src="../images/tema1/header-1.png" alt="">
         <div class="header-des-img">
-                        <h1>#Destination<span class="blue-style">hygge</span></h1> 
+            <h1>#Destination<span class="blue-style">hygge</span></h1>
             <img id="destinationhygge-billede1" src="../images/tema1/header-1.png" alt="">
         </div>
     </header>
-<section class="section-blue">
-    <div class="local-txt">
-        <h3 class="h3-white loacl-h3">LOCALHOOD</h3>
-        <p>Forestil dig at du skal på storbyferie - hvad har du lyst til at se? Du har helt sikkert to-tre seværdigheder
-            som er et mustsee, men du vil også gerne se den autentiske side af byen og alle dens små gemte steder - og
-            for guds skyld undgå alle turistfælderne. Eksperter mener at turisme som vi kender det, er uddødt. Hvem
-            gider at spise på overfyldte restauranter med mad til overpris, når du kan komme til middag hjemme hos en
-            lokal indbygger, der ovenikøbet kan fortælle en masse om livet, i den by du befinder dig i. Hvem gider at
-            rende rundt som et flokdyr med head set på, og lytte til en kedelig guide, når du kan få en privat
-            rundvisning af en lokal, der kender byen som sin egen inderlomme. Det er lige netop det som begrebet
-            localhood dækker over. Turister vil være “temporary locals” og du har nu chancen for at blive en del af
-            rejsen. </p>
-    </div>
-</section>
-
-<section class="section-light-blue">
-
-<!--Slider med billeder-->
-    <div id="vueapp">
-        <div class="slide-container">
-            <swiper :options="swiperOption">
-                <!-- slides -->
-                <swiper-slide class="slide-1">
-                            <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i class="fas fa-play"></i></span></button>
-                </swiper-slide>
-                <swiper-slide class="slide-2">Video 2</swiper-slide>
-                <swiper-slide class="slide-3">Video 3</swiper-slide>
-                <swiper-slide class="slide-4">Video 4</swiper-slide>
-                
-                <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
-                <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
-                <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
-            </swiper>
+    <section class="section-blue">
+        <div class="local-txt">
+            <h3 class="h3-white loacl-h3">LOCALHOOD</h3>
+            <p>Forestil dig at du skal på storbyferie - hvad har du lyst til at se? Du har helt sikkert to-tre
+                seværdigheder
+                som er et mustsee, men du vil også gerne se den autentiske side af byen og alle dens små gemte steder -
+                og
+                for guds skyld undgå alle turistfælderne. Eksperter mener at turisme som vi kender det, er uddødt. Hvem
+                gider at spise på overfyldte restauranter med mad til overpris, når du kan komme til middag hjemme hos
+                en
+                lokal indbygger, der ovenikøbet kan fortælle en masse om livet, i den by du befinder dig i. Hvem gider
+                at
+                rende rundt som et flokdyr med head set på, og lytte til en kedelig guide, når du kan få en privat
+                rundvisning af en lokal, der kender byen som sin egen inderlomme. Det er lige netop det som begrebet
+                localhood dækker over. Turister vil være “temporary locals” og du har nu chancen for at blive en del af
+                rejsen. </p>
         </div>
-        <modal v-if="showModal" @close="showModal = false"></modal>
-    </div>
+    </section>
+
+    <section class="section-light-blue">
+
+        <!--Slider med billeder-->
+        <div id="vueapp">
+            <div class="slide-container">
+                <swiper :options="swiperOption">
+                    <!-- slides -->
+                    <swiper-slide class="slide-1">
+                        <button class="play" id="show-modal" @click="showModal = true"><span class="play-icon"><i
+                                    class="fas fa-play"></i></span></button>
+                    </swiper-slide>
+                    <swiper-slide class="slide-2">Video 2</swiper-slide>
+                    <swiper-slide class="slide-3">Video 3</swiper-slide>
+                    <swiper-slide class="slide-4">Video 4</swiper-slide>
+
+                    <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+                    <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+                    <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
+                </swiper>
+            </div>
+            <modal v-if="showModal" @close="showModal = false"></modal>
+        </div>
 
 
-<!--Modal med video 1-->
-    <script type="text/x-template" id="modal-template">
-          <div class="modal-mask">
+        <!--Modal med video 1-->
+        <script type="text/x-template" id="modal-template">
+            <div class="modal-mask">
             <div class="modal-wrapper">
               <div class="modal-container">
                     <video controls>
@@ -97,76 +102,84 @@
             </div>
           </div>
       </script>
-    
-<!--Vue App - Slider + video -->
-    <script>
-        Vue.component('modal', {
-        template: '#modal-template'}), 
-        Vue.use(VueAwesomeSwiper), 
-        new Vue({
-            el: '#vueapp',
-            data: {
-                swiperOption: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+
+        <!--Vue App - Slider + video -->
+        <script>
+            Vue.component('modal', {
+                    template: '#modal-template'
+                }),
+                Vue.use(VueAwesomeSwiper),
+                new Vue({
+                    el: '#vueapp',
+                    data: {
+                        swiperOption: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
 
 
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev'
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev'
+                            }
+                        },
+
+                        showModal: false,
                     }
-                }, 
-
-                showModal: false, 
-            }
-        })
-    </script>
+                })
+        </script>
 
 
-</section>
+    </section>
 
-<section id="citat-section" class="section-citat">
-    <div class="border-dotted">
-        <div class="border-solid">
-            <div class="citat-wrapper">
-                <h2>“Det giver mig lidt mere luft i budgettet, at have det sjovt for“</h2>
-                <p>- Mathias Svendsen, Medietekniker Studerende</p>
+    <section id="citat-section" class="section-citat">
+        <div class="border-dotted">
+            <div class="border-solid">
+                <div class="citat-wrapper">
+                    <h2>“Det giver mig lidt mere luft i budgettet, at have det sjovt for“</h2>
+                    <p>- Mathias Svendsen, Medietekniker Studerende</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section-blue">
-    <div class="local-txt">
-        <h3 class="h3-white loacl-h3">Om kampagne</h3>
-        <p>I denne kampagne rækker vi ud til studerende på Fyn. De er ofte tvunget ud i kedelige studiejobs hvor mange
-            timers hårdt arbejde, giver meget lidt overskud i økonomien. Samtidig kan det være svært at møde nye
-            mennesker når studiegruppen hurtigt bliver ens nye omgangskreds, og som tilflytter til Fyn kan det være
-            svært at skabe et netværk, især udenfor studiet. Disse problemstillinger løser vi sammen med dig. Vi guider
-            dig til, hvordan du kan bruge dine interesser på en ny måde og giver dig et netværk i vores community af
-            localhood ambassadører. Du er garanteret at få oplevelser du aldrig vil glemme, når du har mulighed for at
-            møde mennesker fra hele verden på din hjemmebane, mens du ovenikøbet tjener penge på det! Vi opfordrer til
-            at du gør oplevelserne til en del af din hverdag: Læser du historie? - Tag turister med på byvandring. Løber
-            du hver dag? - Tag dem med på en running sightseeing! Laver du mad som en chef? - Inviter dem på middag. Går
-            du på pubcrawl hver weekend? - Vis dem den danske måde at feste på! Det er kun fantasien der sætter grænser!
-        </p>
-    </div>
-</section>
+    <section class="section-blue">
+        <div class="local-txt">
+            <h3 class="h3-white loacl-h3">Om kampagne</h3>
+            <p>I denne kampagne rækker vi ud til studerende på Fyn. De er ofte tvunget ud i kedelige studiejobs hvor
+                mange
+                timers hårdt arbejde, giver meget lidt overskud i økonomien. Samtidig kan det være svært at møde nye
+                mennesker når studiegruppen hurtigt bliver ens nye omgangskreds, og som tilflytter til Fyn kan det være
+                svært at skabe et netværk, især udenfor studiet. Disse problemstillinger løser vi sammen med dig. Vi
+                guider
+                dig til, hvordan du kan bruge dine interesser på en ny måde og giver dig et netværk i vores community af
+                localhood ambassadører. Du er garanteret at få oplevelser du aldrig vil glemme, når du har mulighed for
+                at
+                møde mennesker fra hele verden på din hjemmebane, mens du ovenikøbet tjener penge på det! Vi opfordrer
+                til
+                at du gør oplevelserne til en del af din hverdag: Læser du historie? - Tag turister med på byvandring.
+                Løber
+                du hver dag? - Tag dem med på en running sightseeing! Laver du mad som en chef? - Inviter dem på middag.
+                Går
+                du på pubcrawl hver weekend? - Vis dem den danske måde at feste på! Det er kun fantasien der sætter
+                grænser!
+            </p>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-box">
+            <div class="footer-box-samarbejde">
                 <h6>Samarbejde</h6>
                 <ul>
                     <li><a href="">Destination FYN</a></li>
                     <li><a href="">AirBnb Denmark</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-guides">
                 <h6>Guides</h6>
                 <ul>
                     <li><a href="">Hvordan er man en god vært? </a></li>
@@ -175,7 +188,7 @@
                     <li><a href="">Hvis uheldet er ude?</a></li>
                 </ul>
             </div>
-            <div class="footer-box">
+            <div class="footer-box-video">
                 <h6>#Video</h6>
                 <ul>
                     <li><a href="">#presset</a></li>
@@ -185,7 +198,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-portrætter">
                 <h6>Portrætter</h6>
                 <ul>
                     <li><a href="">Carla Ibsen</a></li>
@@ -195,7 +208,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-community">
                 <h6>Community</h6>
                 <ul>
                     <li><a href="">Facebook gruppe</a></li>
@@ -204,7 +217,7 @@
                 </ul>
 
             </div>
-            <div class="footer-box">
+            <div class="footer-box-follow">
                 <h6>Følg os</h6>
                 <ul class="footer-some">
                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
@@ -215,4 +228,5 @@
         </div>
     </footer>
 </body>
+
 </html>
