@@ -806,9 +806,9 @@ video {
 .header-img-com-container img {
     width: 47.5%;
     position: absolute;
-    right: 5%;
-    bottom: 0;
-    transform: translateY(-50%, -50%);
+    right: 25%;
+    bottom: -5%;
+    transform: translate(50%);
 }
 
 .header-img-com {
