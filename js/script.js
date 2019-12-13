@@ -10,9 +10,15 @@ xhttp.onreadystatechange = function () {
 ThemeIndex = 0;
 
 
+if (ThemeIndex > 0) {
+    sessionStorage.setItem("Index", ThemeIndex);
+    console.log(sessionStorage.getItem("Index"));
+}
+
+
 function getThemeIndex(page) {
-    if (parseInt(sessionStorage.getItem("I")) > 0) {
-        ThemeIndex = parseInt(sessionStorage.getItem("I") - 1);
+    if (parseInt(sessionStorage.getItem("Index")) > 0) {
+        ThemeIndex = parseInt(sessionStorage.getItem("Index") - 1);
         if (page == 'index') {
             changeImageIndex();
         }
@@ -36,11 +42,11 @@ function getThemeIndex(page) {
 function changeImageIndex() {
     ThemeIndex += 1;
 
-    if (ThemeIndex > 3) {
+    if (ThemeIndex > 4 - 1) {
         ThemeIndex = 0;
     }
 
-    sessionStorage.setItem("I", ThemeIndex);
+    sessionStorage.setItem("Index", ThemeIndex);
 
     document.getElementById('index-billede1').src = data.index[ThemeIndex].billede1;
     document.getElementById('index-billede2').src = data.index[ThemeIndex].billede2;
@@ -55,11 +61,12 @@ function changeImageIndex() {
 function changeImageDesHygge() {
     ThemeIndex += 1;
 
-    if (ThemeIndex > 3) {
+    if (ThemeIndex > 4 - 1) {
         ThemeIndex = 0;
     }
 
-    sessionStorage.setItem("I", ThemeIndex);
+
+    sessionStorage.setItem("Index", ThemeIndex);
     document.getElementById('destinationhygge-billede1').src = data.deshygge[ThemeIndex].billede1;
     document.getElementById('destinationhygge-billede2').src = data.deshygge[ThemeIndex].billede2;
     document.getElementById('citat-section').style.backgroundImage = data.deshygge[ThemeIndex].bg;
@@ -69,11 +76,11 @@ function changeImageDesHygge() {
 function changeImageGuides() {
     ThemeIndex += 1;
 
-    if (ThemeIndex > 3) {
+    if (ThemeIndex > 4 - 1) {
         ThemeIndex = 0;
     }
 
-    sessionStorage.setItem("I", ThemeIndex);
+    sessionStorage.setItem("Index", ThemeIndex);
     document.getElementById('guides-billede1').src = data.guides[ThemeIndex].billede1;
     document.getElementById('guides-billede2').src = data.guides[ThemeIndex].billede2;
     document.getElementById('citat-section').style.backgroundImage = data.guides[ThemeIndex].bg;
@@ -84,11 +91,11 @@ function changeImageGuides() {
 function changeImageCom() {
     ThemeIndex += 1;
 
-    if (ThemeIndex > 3) {
+    if (ThemeIndex > 4 - 1) {
         ThemeIndex = 0;
     }
 
-    sessionStorage.setItem("I", ThemeIndex);
+    sessionStorage.setItem("Index", ThemeIndex);
     document.getElementById('community-billede1').src = data.community[ThemeIndex].billede1;
     document.getElementById('community-billede2').src = data.community[ThemeIndex].billede2;
     document.getElementById('citat-section').style.backgroundImage = data.community[ThemeIndex].bg;
