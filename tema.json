@@ -1,37 +1,37 @@
 {
     "index": [{
-            "billede1": "images/tema1/forside.png",
-            "billede2": "images/tema1/forside-2.png",
-            "billede3": "images/tema1/ide.png",
-            "billede4": "images/tema1/opret.png",
-            "billede5": "images/tema1/glad.png",
-            "bg": "url(images/tema1/burger-wallpaper.jpg)"
+            "billede1": "../images/tema1/forside.png",
+            "billede2": "../images/tema1/forside-2.png",
+            "billede3": "../images/tema1/ide.png",
+            "billede4": "../images/tema1/opret.png",
+            "billede5": "../images/tema1/glad.png",
+            "bg": "url(../images/tema1/burger-wallpaper.jpg)"
         },
         {
-            "billede1": "images/tema2/forside.png",
-            "billede2": "images/tema2/forside-2.png",
-            "billede3": "images/tema2/ide.png",
-            "billede4": "images/tema2/opret.png",
-            "billede5": "images/tema2/glad.png",
-            "bg": "url(images/tema2/brik-wallpaper.png)"
-        },
-
-        {
-            "billede1": "images/tema3/forside.png",
-            "billede2": "images/tema3/forside-2.png",
-            "billede3": "images/tema3/ide.png",
-            "billede4": "images/tema3/opret.png",
-            "billede5": "images/tema3/glad.png",
-            "bg": "url(images/tema3/avocado-wallpaper.png)"
+            "billede1": "../images/tema2/forside.png",
+            "billede2": "../images/tema2/forside-2.png",
+            "billede3": "../images/tema2/ide.png",
+            "billede4": "../images/tema2/opret.png",
+            "billede5": "../images/tema2/glad.png",
+            "bg": "url(../images/tema2/brik-wallpaper.png)"
         },
 
         {
-            "billede1": "images/tema4/forside.png",
-            "billede2": "images/tema4/forside-2.png",
-            "billede3": "images/tema4/ide.png",
-            "billede4": "images/tema4/opret.png",
-            "billede5": "images/tema4/glad.png",
-            "bg": "url(images/tema4/lassagne-wallpaper.png)"
+            "billede1": "../images/tema3/forside.png",
+            "billede2": "../images/tema3/forside-2.png",
+            "billede3": "../images/tema3/ide.png",
+            "billede4": "../images/tema3/opret.png",
+            "billede5": "../images/tema3/glad.png",
+            "bg": "url(../images/tema3/avocado-wallpaper.png)"
+        },
+
+        {
+            "billede1": "../images/tema4/forside.png",
+            "billede2": "../images/tema4/forside-2.png",
+            "billede3": "../images/tema4/ide.png",
+            "billede4": "../images/tema4/opret.png",
+            "billede5": "../images/tema4/glad.png",
+            "bg": "url(../images/tema4/lassagne-wallpaper.png)"
         }
     ],
 
