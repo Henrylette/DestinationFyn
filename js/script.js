@@ -9,7 +9,6 @@ xhttp.onreadystatechange = function () {
 
 ThemeIndex = 0;
 
-
 function getThemeIndex(page) {
     if (parseInt(sessionStorage.getItem("I")) > 0) {
         ThemeIndex = parseInt(sessionStorage.getItem("I") - 1);
